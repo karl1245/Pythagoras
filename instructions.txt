@@ -1,0 +1,4 @@
+Follow instructions here:
+https://ionicframework.com/docs/installation/cli
+In the project root directory run
+ionic serve

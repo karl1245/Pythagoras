@@ -1,0 +1,35 @@
+<!-- Generated template for the PythagorasComponent component -->
+<form #form="ngForm" (ngSubmit)="pythcalc(form)" novalidate>
+<ion-card>
+    
+    <ion-card-header>
+      Pythagoras' theorem <br/> <br/>
+      Enter at least two values
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+          <ion-label>a</ion-label>
+          <ion-input type=number min="0" oninput="this.value = Math.abs(this.value)" [(ngModel)]="triangle.a" ngControl="a" name = "a"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>b</ion-label>
+          <ion-input type="number" min="0" oninput="this.value = Math.abs(this.value)" [(ngModel)]="triangle.b" ngControl="b" name = "b"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>c</ion-label>
+          <ion-input type="number" min="0" oninput="this.value = Math.abs(this.value)" [(ngModel)]="triangle.c" ngControl="c" name = "c"></ion-input>
+      </ion-item>
+          
+      <button ion-button type="submit" block>Calculate</button>
+        
+        <div id = result style="display:none;">
+          {{trueerror == true ? error : side + " = " + value}}
+        </div>
+       
+    </ion-card-content>
+  
+  </ion-card>
+</form>
